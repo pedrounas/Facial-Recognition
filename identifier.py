@@ -17,9 +17,9 @@ for file in files:
 for file in file_names:
     temp = face_recognition.load_image_file(file)
     encodings.append(face_recognition.face_encodings(temp)[0])
-
+    
 # Load test image to find faces in
-test_image = face_recognition.load_image_file('./unknown/UnasFB.jpg')
+test_image = face_recognition.load_image_file(sys.argv[1])
 
 # Find faces in test image
 face_locations = face_recognition.face_locations(test_image)
