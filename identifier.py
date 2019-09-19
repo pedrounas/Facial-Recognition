@@ -17,7 +17,7 @@ for file in files:
 for file in file_names:
     temp = face_recognition.load_image_file(file)
     encodings.append(face_recognition.face_encodings(temp)[0])
-    
+
 # Load test image to find faces in
 test_image = face_recognition.load_image_file(sys.argv[1])
 
@@ -42,27 +42,23 @@ for(top, right, bottom, left), face_encoding in zip(face_locations, face_encodin
         first_match_index = matches.index(True)
         name = names[first_match_index]
         name_ = name.replace("_", " ")
-        break
+        print("Found a match by the name of " + name_)
+        # Draw box
+        draw.rectangle(((left, top), (right, bottom)), outline=(255, 0, 0))
 
-if name != "Unknown Person":
-    print("Found a match by the name of " + name_)
+        # Draw label
+        text_width, text_height = draw.textsize(name_)
+        draw.rectangle(((left, bottom - text_height - 10), (right, bottom)),
+                    fill=(255, 0, 0), outline=(255, 0, 0))
+        draw.text((left + 6, bottom - text_height - 5), name_, fill=(0, 0, 0))
 
-    # Draw box
-    draw.rectangle(((left, top), (right, bottom)), outline=(255, 0, 0))
-
-    # Draw label
-    text_width, text_height = draw.textsize(name_)
-    draw.rectangle(((left, bottom - text_height - 10), (right, bottom)),
-                fill=(255, 0, 0), outline=(255, 0, 0))
-    draw.text((left + 6, bottom - text_height - 5), name_, fill=(0, 0, 0))
-
-    del draw
+del draw
 
     # # Display image
-    pil_image.show()
+pil_image.show()
 
     # Save image
-    pil_image.save('result.jpg')
+pil_image.save('result.jpg')
 
-else:
+if name == "Unknown Person":
     print("No match found!")
