@@ -1,35 +1,37 @@
 import smtplib
+import ssl
+from datetime import  date
 
+gmail_user = 'missing.students.cv'
+# problema de segurança, pass do mail do sender em plaintext
+gmail_password = '52S[rheG'
 
-gmail_user = 'mail@gmail.com'
-#problema de segurança, pass do mail do sender em plaintext
-gmail_password = 'passowrd'
+sent_from = 'missing.students.cv@gmail.com'
+# to = ['saraferreira.p3@gmail.com', 'pedrommunas@gmail.com']
+to = ['missing.students.cv@gmail.com'] # Para testar
+subject = 'Attendence for the class of ' + str(date.today().strftime("%d/%m/%Y"))
+body = None
 
-sent_from = 'saraferreira.p3@gmail.com'
-to = ['saraferreira.p3@gmail.com']
-subject = 'Subject test'
-body = "Body test"
+with open('./attendance.txt') as fp:
+    body = fp.read()
 
-email_text = """\
+message = """\
 From: %s
 To: %s
 Subject: %s
-
-%s
+\n%s
 """ % (sent_from, ", ".join(to), subject, body)
 
 
 try:
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.ehlo()
-    #Secure connection
-    server.starttls()
-    #Para isto dar é preciso Allowing less secure apps to access your account
-    server.login(gmail_user, gmail_password)
-    server.sendmail(sent_from, to, email_text)
-    server.close()
+    server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+    server.login("missing.students.cv", "52S[rheG")
+    server.sendmail(
+        sent_from,
+        sent_from,
+        message)
+    server.quit()
+    print('Email sent!')
 
-    print ('Email sent!')
 except:
     print('Something went wrong...')
-
