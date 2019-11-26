@@ -3,8 +3,10 @@ import os
 import sys
 import numpy as np
 import face_recognition
+import send_mail
 
-vid = cv2.VideoCapture('http://192.168.1.4:8080/video')
+# vid = cv2.VideoCapture('http://192.168.1.4:8080/video')
+vid = cv2.VideoCapture(0)
 
 path = './known'
 files = os.listdir(path)
@@ -31,8 +33,6 @@ for file in file_names:
 file = open('students.txt', 'r')
 for line in file:
     students.append(line.rstrip('\n'))
-
-print(students)
 
 
 while True:
@@ -96,7 +96,7 @@ while True:
     # cv2.imshow('Crop', crop)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
-        fp = open('attendance.txt', 'w')
+        fp = open('attendance.txt', 'w+')
 
         fp.write('In class:\n')
 
@@ -109,6 +109,8 @@ while True:
 
         for student in students:
             fp.write(student + '\n')
+        fp.close()
+        send_mail.send()
         break
 
 vid.release()
