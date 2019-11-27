@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="SitePoint" />
+    <script
+      async
+      src="js/opencv.js"
+      type="text/javascript"
+      onload="testCV();"
+    ></script>
+    <script src="js/utils.js"></script>
+  </head>
+
+  <body>
+    <h1>Don't look here please!</h1>
+    <div>
+      <button id="actionBtn">Start</button>
+    </div>
+    <video id="video" width="300" height="225"></video>
+    <canvas id="canvasOutput"></canvas>
+  </body>
+
+  <script>
+    function testCV() {
+      console.log(cv);
+      cv.onRuntimeInitialized = onReady;
+    }
+    const video = document.getElementById("video");
+    const actionBtn = document.getElementById("actionBtn");
+    const width = 300;
+    const height = 225;
+    const FPS = 30;
+    let stream;
+    let streaming = false;
+    function onReady() {
+      let src;
+      let dst;
+      let gray;
+      let faces = new cv.RectVector();
+      let cap = new cv.VideoCapture(video);
+      let classifier = new cv.CascadeClassifier();
+      let utils = new Utils("errorMessage");
+      let faceCascadeFile = "haarcascade_frontalface_default.xml"; // path to xml
+      utils.createFileFromUrl(faceCascadeFile, faceCascadeFile, () => {
+        classifier.load(faceCascadeFile); // in the callback, load the cascade from file
+      });
+
+      actionBtn.addEventListener("click", () => {
+        if (streaming) {
+          stop();
+          actionBtn.textContent = "Start";
+        } else {
+          start();
+          actionBtn.textContent = "Stop";
+        }
+      });
+      function start() {
+        navigator.mediaDevices
+          .getUserMedia({ video: true, audio: false })
+          .then(_stream => {
+            stream = _stream;
+            console.log("stream", stream);
+            video.srcObject = stream;
+            video.play();
+            streaming = true;
+            src = new cv.Mat(height, width, cv.CV_8UC4);
+            dst = new cv.Mat(height, width, cv.CV_8UC1);
+            gray = new cv.Mat();
+            setTimeout(processVideo, 0);
+          })
+          .catch(err => console.log(`An error occurred: ${err}`));
+      }
+      function stop() {
+        if (video) {
+          video.pause();
+          video.srcObject = null;
+        }
+        if (stream) {
+          stream.getVideoTracks()[0].stop();
+        }
+        streaming = false;
+      }
+      function processVideo() {
+        if (!streaming) {
+          src.delete();
+          dst.delete();
+          return;
+        }
+        const begin = Date.now();
+        cap.read(src);
+        src.copyTo(dst);
+        cv.cvtColor(dst, gray, cv.COLOR_RGBA2GRAY, 0);
+
+        classifier.detectMultiScale(gray, faces, 1.1, 3, 0);
+        console.log(faces)
+        for (let i = 0; i < faces.size(); ++i) {
+          let face = faces.get(i);
+          console.log(face)
+          let point1 = new cv.Point(face.x, face.y);
+          let point2 = new cv.Point(face.x + face.width, face.y + face.height);
+          cv.rectangle(dst, point1, point2, [255, 0, 0, 255], thickness = 3);
+        }
+        cv.imshow("canvasOutput", dst);
+        const delay = 1000 / FPS - (Date.now() - begin);
+        setTimeout(processVideo, delay);
+      }
+    }
+  </script>
+</html>
