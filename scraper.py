@@ -1,10 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
-import urllib.request
+import urllib.request 
+import os
+import requests
 
 user_name = "up201606726"
-password = ""
+password = "Chitaveloz98"
 driver = webdriver.Firefox()
 driver.get("https://sigarra.up.pt/fcup/pt/WEB_PAGE.INICIAL")
 element = driver.find_element_by_id("user")
@@ -21,10 +23,27 @@ for i in range (2,52):
 	element=driver.find_element_by_xpath("//*[@id='conteudoinner']/table/tbody/tr["+str(i)+"]/td[1]/a")
 	element.click()
 	time.sleep(5)
-	#print(driver.page_source)
-	url = driver.find_element_by_xpath("/html/body/div[4]/div[3]/div[3]/div/div[2]/div/div[1]/div/img").get_attribute("src")
-	#falta fazer download da imagem
-	urllib.request.urlretrieve(url, "local-filename.jpg")
+	img_url = driver.find_element_by_xpath("/html/body/div[4]/div[3]/div[3]/div/div[2]/div/div[1]/div/img").get_attribute("src")
+	#o link da imagem esta certo
+	print(img_url)
+	img_name = str(i)+"jpg"
+	##Método1 - dá forbidden
+
+	#urlretrieve(image, "student"+str(i)+".jpg")
+	##Método2 - dá uma imagem sem cara
+		
+	#r = requests.get(img_url,
+                 #stream=True, headers={'User-agent': 'Mozilla/5.0'})
+	#if r.status_code == 200:
+		#with open(img_name, 'wb') as f:
+			#r.raw.decode_content = True
+			#shutil.copyfileobj(r.raw, f)
+	##Método3 - dá forbidden
+	
+	#opener=urllib.request.build_opener()
+	#opener.addheaders=[('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1941.0 Safari/537.36')]
+	#urllib.request.install_opener(opener)
+	#urllib.request.urlretrieve(img_url,img_name)
 	break
 
 
