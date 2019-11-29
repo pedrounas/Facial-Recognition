@@ -39,11 +39,14 @@ for i in range (2,52):
 			#r.raw.decode_content = True
 			#shutil.copyfileobj(r.raw, f)
 	##Método3 - dá forbidden
-	
+	#print(requests.cookies.get('HTTP_SESSION'))
 	#opener=urllib.request.build_opener()
-	#opener.addheaders=[('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1941.0 Safari/537.36')]
+	#opener.addheaders.append(('Cookie','HTTP_SESSION=112087644'))
 	#urllib.request.install_opener(opener)
 	#urllib.request.urlretrieve(img_url,img_name)
+	#Metodo4 - Wget 
+	#wget --save-cookies cookies.txt --keep-session-cookies --auth-no-challenge --user=up201606726 --password=Chitaveloz98 https://sigarra.up.pt/fcup/pt/WEB_PAGE.INICIAL
+	#wget --load-cookies cookies.txt https://sigarra.up.pt/fcup/pt/fotografias_service.foto?pct_cod=201200765
 	break
 
 
