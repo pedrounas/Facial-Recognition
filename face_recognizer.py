@@ -4,6 +4,9 @@ import sys
 import numpy as np
 import face_recognition
 import send_mail
+import get_names
+
+get_names.get_students()
 
 # vid = cv2.VideoCapture('http://192.168.1.4:8080/video')
 vid = cv2.VideoCapture(0)
