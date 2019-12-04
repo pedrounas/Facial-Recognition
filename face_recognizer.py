@@ -3,48 +3,7 @@ import os
 import sys
 import numpy as np
 import face_recognition
-import smtplib
-import ssl
-from datetime import date
-
-
-def send():
-
-    gmail_user = 'missing.students.cv'
-    # problema de segurança, pass do mail do sender em plaintext
-    gmail_password = '52S[rheG'
-
-    sent_from = 'missing.students.cv@gmail.com'
-    # to = ['saraferreira.p3@gmail.com', 'pedrommunas@gmail.com']
-    to = ['missing.students.cv@gmail.com']  # Para testar
-    subject = 'Attendence for the class of ' + \
-        str(date.today().strftime("%d/%m/%Y"))
-    body = None
-
-    with open('./attendance.txt') as fp:
-        body = fp.read()
-
-    message = """\
-    From: %s
-    To: %s
-    Subject: %s
-    \n\n%s
-    """ % (sent_from, ", ".join(to), subject, body)
-
-    try:
-        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.ehlo()
-        server.login(gmail_user, gmail_password)
-        server.sendmail(
-            sent_from,
-            sent_from,
-            message)
-        server.quit()
-        print('Email sent!')
-
-    except:
-        print('Something went wrong...')
-
+import send_mail
 
 # vid = cv2.VideoCapture('http://192.168.1.4:8080/video')
 vid = cv2.VideoCapture(0)
@@ -103,9 +62,9 @@ while True:
         for face_encoding in face_encodings:
             matches = face_recognition.compare_faces(
                 encodings, face_encoding)
-            
+
             name = "Unknown"
-            
+
             face_distances = face_recognition.face_distance(
                 encodings, face_encoding)
 
@@ -155,7 +114,7 @@ while True:
         for student in students:
             fp.write(student + '\n')
         fp.close()
-        # send()
+        send_mail.send()
         break
 
 vid.release()
