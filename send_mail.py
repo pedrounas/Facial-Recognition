@@ -11,7 +11,7 @@ def send():
 
     sent_from = 'missing.students.cv@gmail.com'
     # to = ['saraferreira.p3@gmail.com', 'pedrommunas@gmail.com',
-          # 'missing.students.cv@gmail.com']
+    #      'missing.students.cv@gmail.com']
     to = ['missing.students.cv@gmail.com']  # Para testar
     subject = 'Attendence for the class of ' + \
         str(date.today().strftime("%d/%m/%Y"))
@@ -36,4 +36,3 @@ def send():
 
     except:
         print('Something went wrong...')
-

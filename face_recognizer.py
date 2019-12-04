@@ -41,10 +41,6 @@ file = open('students.txt', 'r')
 for line in file:
     students.append(line.rstrip('\n'))
 
-cv2.namedWindow('Video', cv2.WINDOW_AUTOSIZE)
-cv2.setWindowProperty('Video', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
-cv2.setWindowProperty('Video', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_NORMAL)
-
 while True:
 
     ret, frame = vid.read()
@@ -84,9 +80,6 @@ while True:
         bottom *= 4
         left *= 4
 
-        # print(name, top, bottom, left, right)
-        # crop = frame[top:bottom, left:right]
-
         cv2.rectangle(frame, (left, top), (right, bottom),
                       (0, 0, 255), 1)
 
@@ -99,8 +92,6 @@ while True:
                     font, 1.0, (0, 0, 255), 1)
 
     cv2.imshow('Video', frame)
-
-    # cv2.imshow('Crop', crop)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         fp = open('attendance.txt', 'w+')
