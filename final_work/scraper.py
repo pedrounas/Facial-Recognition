@@ -50,4 +50,5 @@ def get_students_names():
 		#wget --load-cookies cookies.txt https://sigarra.up.pt/fcup/pt/fotografias_service.foto?pct_cod=201200765
 	return names
 
+test_names=get_students_names()
 

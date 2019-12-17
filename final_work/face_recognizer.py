@@ -9,14 +9,11 @@ import datetime
 import scraper
 import time
 
-#get_names.get_students()
 
-# vid = cv2.VideoCapture('http://192.168.1.4:8080/video')
 vid = cv2.VideoCapture(0)
 now = datetime.datetime.now()
 week_day= datetime.datetime.now().weekday() #Return the day of the week as an integer, where Monday is 0 and Sunday is 6.
 print("Hora: %s/%s %s:%s" % (now.day, now.month, now.hour, now.minute))
-#while(week_day ==2 and now.hour>8 and now.minute>10 && now.hour<=10 && now.minute<=30): #se tá dentro do horario de aula
 names = []
 path = './known/'
 files = os.listdir(path)
@@ -30,7 +27,10 @@ face_encodings = []
 found_names = []
 students = []
 first_time=True;
-while(week_day ==3 and now.hour>14 and now.hour<18): #para testar 
+
+
+while(week_day ==2 and now.hour>8 and now.minute>10 and now.hour<=10 and now.minute<=30): #se tá dentro do horario de aula
+
 	now = datetime.datetime.now()
 	if(first_time==True): #so vai buscar o nome uma vez
 		print("****************************")
@@ -42,9 +42,6 @@ while(week_day ==3 and now.hour>14 and now.hour<18): #para testar
 		names=scraper.get_students_names()
 		
 	first_time=False;
-	#names.append(nome)
-	
-	#break
 	
 
 	for file in files:

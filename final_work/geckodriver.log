@@ -1,0 +1,73 @@
+1576601044307	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/3z/6rwrr_7x36v8wr99hx1r1mn00000gn/T/rust_mozprofileRhABNG"
+1576601044929	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1576601044929	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1576601044929	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1576601044929	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1576601047049	Marionette	INFO	Listening on port 50592
+1576601047094	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sigarra.up.pt/fcup/pt/WEB_PAGE.INICIAL, line 261: TypeError: $.cookieBar is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 393: TypeError: $(...).fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+1576601154672	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/3z/6rwrr_7x36v8wr99hx1r1mn00000gn/T/rust_mozprofilehWPoT1"
+1576601155391	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1576601155392	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1576601155392	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1576601155392	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1576601157483	Marionette	INFO	Listening on port 50673
+1576601157549	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sigarra.up.pt/fcup/pt/WEB_PAGE.INICIAL, line 261: TypeError: $.cookieBar is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 393: TypeError: $(...).fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/js/jquery.sigarra.fvld.js, line 384: TypeError: uiThis.fvld is not a function
+JavaScript error: https://sigarra.up.pt/fcup/pt/WEB_PAGE.INICIAL, line 265: TypeError: $.cookieBar is not a function
+1576601243651	Marionette	INFO	Stopped listening on port 50592
+1576601246147	Marionette	INFO	Stopped listening on port 50673

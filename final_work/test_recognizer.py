@@ -8,7 +8,6 @@ import get_names
 
 get_names.get_students()
 
-# vid = cv2.VideoCapture('http://192.168.1.4:8080/video')
 vid = cv2.VideoCapture(0)
 
 path = './test/'
